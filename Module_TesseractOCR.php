@@ -39,7 +39,7 @@ final class Module_TesseractOCR extends GDO_Module
     {
         $path2 = $path . '.jpg';
         $im = Module_ImageMagick::instance()->cfgConvertPath();
-        $cmd = sprintf('%s %s -bordercolor White -border 120x120 %s', escapeshellarg($im), escapeshellarg($path), escapeshellarg($path2));
+        $cmd = sprintf('%s %s -bordercolor White -border 20x20 %s', escapeshellarg($im), escapeshellarg($path), escapeshellarg($path2));
         echo "{$cmd}\n";
         $output = null;
         $result = exec($cmd, $output);
